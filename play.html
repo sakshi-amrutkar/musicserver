@@ -1,0 +1,15 @@
+<body background="/static/concert.jpg">
+{% extends 'base.html' %}
+{% block play %}
+<center>
+        <br><br><br><br><br><br><br><br>
+<h1> {{ title }} </h1>
+        <hr size="3" color="black">
+        <br><br>
+        <audio controls autoplay>
+                <source src="static/tppp/{{ music_file }}" type="audio/mp3">
+                Your browser does not support this audio format.
+        </audio>
+</center>
+{% endblock %}
+</body>

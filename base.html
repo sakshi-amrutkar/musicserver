@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"><script type="text/javascript">
+    function queue_sounds(music_files){
+
+    var i = 0;
+    function recursive_play()
+    {
+      if(i+1 === music_files.length)
+      {
+        play(music_files[i],null);
+      }
+      else
+      {
+        play(music_files[i],function(){i++; recursive_play();});
+      }
+    }
+
+recursive_play();
+}
+</script>
+
+<title>Media Player - {{ title }}</title>
+
+</head>
+<body>
+{% block play%}{% endblock %}
+</body>
+</html>
